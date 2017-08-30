@@ -33,6 +33,7 @@ module Split
       end
 
       set_alternatives_and_options(options)
+      self.metadata = self.metadata.try(:with_indifferent_access)
     end
 
     def self.finished_key(key)
